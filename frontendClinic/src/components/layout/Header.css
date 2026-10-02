@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
+
+/* Header Container Styles */
+.header-container {
+  @apply sticky top-0 z-50 bg-forest text-white border-b border-forest-800 shadow-md transition-all duration-300;
+}
+
+/* Brand Logo Styling */
+.brand-logo-container {
+  @apply flex items-center space-x-3 transition-transform duration-200 hover:scale-105;
+}
+
+.brand-icon-wrapper {
+  @apply bg-white text-forest p-2 rounded-xl shadow-sm flex items-center justify-center;
+}
+
+.brand-title {
+  @apply text-2xl font-extrabold tracking-tight text-white;
+}
+
+.brand-title-accent {
+  @apply text-coral;
+}
+
+/* Navigation Link Styling */
+.nav-link {
+  @apply text-gray-200 hover:text-coral font-medium text-sm transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/5;
+}
+
+.nav-link-active {
+  @apply text-coral font-bold bg-white/10;
+}
+
+/* Action CTA Buttons */
+.btn-emergency {
+  @apply flex items-center space-x-2 px-4 py-2 bg-coral hover:bg-coral-600 text-white text-sm font-bold rounded-xl shadow transition-all duration-200 hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary-link {
+  @apply flex items-center space-x-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-xl border border-white/20 transition-all duration-200;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-enter {
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Indicator for Emergency Hotline */
+.emergency-pulse {
+  @apply relative flex h-2.5 w-2.5;
+}
+
+.emergency-pulse-ping {
+  @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-coral opacity-75;
+}
+
+.emergency-pulse-dot {
+  @apply relative inline-flex rounded-full h-2.5 w-2.5 bg-coral;
+}
