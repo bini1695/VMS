@@ -8,7 +8,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaMapMarkedAlt } from 'rea
 import './Contact.css';
 import callImg from '../assets/call.jpg';
 
-const contact = () => {
+const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
